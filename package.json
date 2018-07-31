@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://at1452.github.io/gitsite/",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
