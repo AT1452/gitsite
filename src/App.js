@@ -1,44 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Navbar, MenuItem, Nav, NavDropdown, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+
+
+
 
 class App extends Component {
+
+    constructor(props){
+        super(props);
+        this.changeBackground = this.changeBackground.bind(this);
+        this.state = {
+            dropped : false
+        };
+    }
+
+    changeBackground(){
+        this.setState({dropped: true})
+    }
+
     render() {
         return (
             <div className="App">
-                {/*<header className="App-header" style={{alignItems: "horizontal"}}>
-                    <h1 className="App-title">AT</h1>
-                </header>*/}
-                <Navbar fluid collapseOnSelect className = "navbar-main">
+                <Navbar collapseOnSelect className = "navbar-main">
                     <Navbar.Header>
-                        <div className = "navbar-brand">
+                        <Navbar.Brand style = {{color: '#000'}}>
                             <p className="brand-name">AT</p>
-                        </div>
+                        </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav>
+                    <Navbar.Collapse className = "drop-menu">
+                        <Nav className = "nav-elements-left">
                             <NavItem eventKey={1} href="#">
-                                Link
+                                About Me
                             </NavItem>
                             <NavItem eventKey={2} href="#">
-                                Link
+                                Projects
                             </NavItem>
-                            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1}>Action</MenuItem>
-                                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                            </NavDropdown>
                         </Nav>
-                        <Nav pullRight>
+                        <Nav pullRight className = "nav-elements-right">
                             <NavItem eventKey={1} href="#">
-                                Link Right
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                Link Right
+                                Contact Me
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
