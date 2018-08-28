@@ -22,15 +22,17 @@
     font-size: large;
 }
 
-.homepage{
-    height: 100%;
-    width: 100%;
-    background-color: azure;
-
-}
-
 .background-img{
+    /* Set a specific height */
+    min-height: 50vw;
     max-width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./assets/ripplesHigh.jpg");
 }
 
 .navbar-main{
@@ -62,9 +64,143 @@
 
 @media screen and (max-width: 767px){
     .drop-menu{
-        margin-top: 10px;
+        position: relative;
+        margin-top: 7px;
+        background-color: white;
+        z-index: 100;
+    }
+    .intro-text{
+        font-size: 4em !important;
+    }
+    .about-me{
+        font-size: 4em !important;
+    }
+    .basic-info{
+        font-size: 0.8em !important;
+        top: 100vw;
     }
 }
+
+@media screen and (max-width: 817px){
+
+}
+
+.its-me{
+    font-size: 6vw;
+    position: absolute;
+    top:25vw;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: 50vw;
+    border-bottom: 2px solid white;
+}
+
+.basic-info{
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    top: 70vw;
+    left: 0;
+    right: 0;
+    padding-left: 35vw;
+    padding-right: 35vw;
+    font-family: Lato;
+    color: dimgray;
+    font-size: 1.2vw;
+}
+
+.round-icon{
+    padding: 10px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+    display: inline-block;
+    border-radius: 100%;
+    width: 6vw;
+    height: 6vw;
+}
+
+.expo-cards{
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    background-color: red;
+    margin-top: 5vw;
+    left: 10vw;
+}
+
+.expo-card-title{
+    position: relative;
+    width: 100%;
+    bottom: 2.5vw;
+    margin-left: 28vw;
+    font-family: Lato;
+    font-size: 2vw;
+}
+
+.img-fit-delphi{
+    height: 4vw;
+    width: 4vw;
+    object-fit: contain;
+}
+
+.img-fit-blockchain{
+    height: 4vw;
+    width: 4vw;
+    object-fit: contain;
+}
+
+.img-fit-ai{
+    height: 4vw;
+    width: 4vw;
+    object-fit: contain;
+}
+
+.img-fit-mobile{
+    height: 4vw;
+    width: 4vw;
+    margin-top: 0.3vw;
+    object-fit: contain;
+}
+
+.button-links{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    top: 114vw;
+}
+
+.face-placeholder{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.credits{
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+.back-color{
+    width: 100px;
+    height: 200px;
+    background-color: rebeccapurple;
+}
+
+
+
 
 
 
